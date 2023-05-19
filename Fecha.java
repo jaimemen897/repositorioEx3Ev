@@ -5,7 +5,6 @@ public class Fecha {
     int ano, mes, dia, hora, minuto;
 
 
-
     Fecha() {
         Calendar calendario = Calendar.getInstance();  //Calendar: clase abstracta
         Date fecha = calendario.getTime();
