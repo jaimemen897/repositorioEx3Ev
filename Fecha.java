@@ -4,11 +4,7 @@ import java.util.Date;
 public class Fecha {
     int ano, mes, dia, hora, minuto;
 
-    public Fecha(int ano, int mes, int dia) {
-        this.ano = ano;
-        this.mes = mes;
-        this.dia = dia;
-    }
+
 
     Fecha() {
         Calendar calendario = Calendar.getInstance();  //Calendar: clase abstracta
