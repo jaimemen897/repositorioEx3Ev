@@ -23,7 +23,7 @@ public class Transporte {
 		  String dni=t.leerString();
 		  Fecha hoy= new Fecha();
 		  int numero=(int)f.length()/b.getTamanoRegistro();
-  	      b=new Billete(numero, tipo, hoy.a�o, hoy.mes,hoy.dia,hoy.hora, hoy.minuto, 1,dni);
+  	      b=new Billete(numero, tipo, hoy.ano�o, hoy.mes,hoy.dia,hoy.hora, hoy.minuto, 1,dni);
   	      f.seek(f.length());
 		  b.escribir(f);
 		}
@@ -49,13 +49,13 @@ public class Transporte {
 			irARegistro(f, b.numero, b.getTamanoRegistro());
 			b.leer(f);
 			correcto=false;
-			if (b.tipo==1 && b.ano==fViaje.a�o )
+			if (b.tipo==1 && b.ano==fViaje.ano�o )
 			  correcto=true;
 			if (b.tipo==2 && 
 			     new Fecha(b.ano,b.mes, b.dia, b.hora,b.minuto).menor90minutos(fViaje))  
 			  correcto=true;
 			if (!correcto) {
-			  bw.write(b.dni+"#"+b.numero+"#"+fViaje.a�o+"#"+fViaje.mes
+			  bw.write(b.dni+"#"+b.numero+"#"+fViaje.ano�o+"#"+fViaje.mes
 					+"#"+fViaje.dia+"#"+fViaje.hora+"#"+fViaje.minuto);
 			  bw.newLine();
 			  if (b.tipo==2) {
